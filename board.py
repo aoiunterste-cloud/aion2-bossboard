@@ -44,7 +44,7 @@ def build():
         'title': '⏰ ボス時間（ミスランテイダ天族）',
         'description': desc,
         'color': 0xE67E22,
-        'footer': {'text': '討伐報告からの推定・5 分ごとに更新。アグロは月木土 21:30（資料で割れ）。ゲーム内のマップ→探検でも確認できます'},
+        'footer': {'text': '討伐報告からの推定・数分ごとに更新。アグロは月木土 21:30（資料で割れ）。ゲーム内のマップ→探検でも確認できます'},
         'timestamp': dt.datetime.fromtimestamp(now, dt.timezone.utc).isoformat(),
     }], 'allowed_mentions': {'parse': []}}
 
