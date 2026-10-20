@@ -39,7 +39,7 @@ def build():
     a = next_argo(now)
     argo = f'🔴 **アグロ**　出現中（<t:{a}:t> から）' if a <= now else f'**アグロ**　<t:{a}:f>（<t:{a}:R>）'
     lines = [x[1] for x in sorted(alive)] + [x[1] for x in sorted(soon)] + [x[1] for x in sorted(later)]
-    desc = '\n'.join(lines) + '\n\n**アビス**\n' + argo
+    desc = '\n'.join(lines) + '\n\n**アビス**\n' + argo + f'\n\n🕒 最終更新 <t:{now}:t>（<t:{now}:R>）'
     return {'embeds': [{
         'title': '⏰ ボス時間（ミスランテイダ天族）',
         'description': desc,
