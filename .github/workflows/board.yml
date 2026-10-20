@@ -1,0 +1,15 @@
+name: bossboard
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 board.py
+        env:
+          BOARD_WEBHOOK_URL: ${{ secrets.BOARD_WEBHOOK_URL }}
+          BOARD_MESSAGE_ID: ${{ secrets.BOARD_MESSAGE_ID }}
